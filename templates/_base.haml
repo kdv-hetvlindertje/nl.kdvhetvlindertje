@@ -1,0 +1,43 @@
+!!! 5
+%html
+  %head
+    %meta(http_equiv='Content-Type',content='text/html; charset=UTF-8')
+    %meta(name='viewport',content='initial-scale = 1.0,maximum-scale = 1.0')
+    %meta(name="language",content="nl_NL")
+
+    %link(rel='stylesheet',href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css')
+    %link(rel='stylesheet',href='https://fonts.googleapis.com/css?family=Open+Sans:400,700')
+    %link(rel='stylesheet',href='./stylesheets/default.css')
+
+    %script(src='//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js')
+    %script(src='https=//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js')
+
+    <%block name="head" />
+
+    %title Kinderdagverblijf Het Vlindertje
+
+  %body
+    %nav.navbar.navbar-fixed-top
+      .container
+        .navbar-header
+          %button.navbar-toggle.collapsed(data_target='#navbar', type='button')
+            %span.sr-only Toggle Navigation
+            %span.icon-bar
+            %span.icon-bar
+            %span.icon-bar
+          %a.navbar-brand(href='/')
+            %img#logo(src='./img/logo-small.png')
+        #navbar.collapse.navbar-collapse
+          %ul.nav.navbar-nav
+            %li.active
+              %a(href='/') Home
+            %li
+              %a(href='/team.html') Team
+            %li
+              %a(href='/tarieven.html') Tarieven
+            %li
+              %a(href='/openingstijden.html') Openingstijden
+            %li
+              %a(href='/contact.html') Contact
+
+    ${self.body()}
