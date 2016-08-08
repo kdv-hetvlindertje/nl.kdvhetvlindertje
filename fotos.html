@@ -61,14 +61,57 @@
 		</nav>
 		
 	<div class="container">
-		<h1 class="page-header">
-			Tarieven
-		</h1>
-		<a class="pull-right" href="./img/tarieven2016.pdf">
-			Downloaden
+		<div class="row">
+			<div class="col-md-12">
+				<h1 class="page-header">Foto's</h1>
+			</div>
+		</div>
+		<div class="row">
+			<div class="images">
+				
+	<div class="col-md-3">
+		<a href="./img/foto/5.jpg" class="lightbox-handler" data-gallery="Foto's", data-title="Lichte binnenruimte">
+			<img class="img-thumbnail img-responsive" src="./img/foto/5_thumb.jpg" width="100%" />
 		</a>
-		<iframe frameborder="0" height="2500" src="./img/tarieven2016.pdf" style="border:0" width="100%"></iframe>
 	</div>
+
+				
+	<div class="col-md-3">
+		<a href="./img/foto/6.jpg" class="lightbox-handler" data-gallery="Foto's", data-title="Binnenruimte">
+			<img class="img-thumbnail img-responsive" src="./img/foto/6_thumb.jpg" width="100%" />
+		</a>
+	</div>
+
+				
+	<div class="col-md-3">
+		<a href="./img/foto/1.jpg" class="lightbox-handler" data-gallery="Foto's", data-title="Keuken">
+			<img class="img-thumbnail img-responsive" src="./img/foto/1_thumb.jpg" width="100%" />
+		</a>
+	</div>
+
+				
+	<div class="col-md-3">
+		<a href="./img/foto/3.jpg" class="lightbox-handler" data-gallery="Foto's", data-title="Speeltuin">
+			<img class="img-thumbnail img-responsive" src="./img/foto/3_thumb.jpg" width="100%" />
+		</a>
+	</div>
+
+				
+	<div class="col-md-3">
+		<a href="./img/foto/4.jpg" class="lightbox-handler" data-gallery="Foto's", data-title="Speeltuin">
+			<img class="img-thumbnail img-responsive" src="./img/foto/4_thumb.jpg" width="100%" />
+		</a>
+	</div>
+
+			</div>
+		</div>
+	</div>
+	<script>
+		$(document).delegate('.lightbox-handler', 'click', function(event) {
+			event.preventDefault();
+			$(this).ekkoLightbox();
+		});
+	</script>
 
 		<div class="footer">
 			<div id="callme">
