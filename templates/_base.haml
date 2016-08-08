@@ -11,9 +11,11 @@
     %link(rel='stylesheet',href='https://fonts.googleapis.com/css?family=Open+Sans:400,700')
     %link(rel='stylesheet',href='https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css')
     %link(rel='stylesheet',href='./stylesheets/default.css')
+    %link(rel='stylesheet',href='https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/4.0.1/ekko-lightbox.min.css')
 
     %script(src='//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js')
     %script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js')
+    %script(src='https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/4.0.1/ekko-lightbox.min.js')
 
     <%block name="head" />
 
@@ -35,18 +37,15 @@
             -# %li
             -#   %a(href='/team.html') Team
             %li
+              %a(href='/fotos.html') Foto's
+            %li
               %a(href='/tarieven.html') Tarieven
             %li
               %a(href='/openingstijden.html') Openingstijden
-            %li.dropdown
-              %a.dropdown-toggle(href='#',role='button', **{'data-toggle':'dropdown'})
-                Contact
-                %span.caret
-              %ul.dropdown-menu
-                %li
-                  %a(href='/contact.html') Contact
-                %li
-                  %a(href='/inschrijven.html') Inschrijven
+            %li
+              %a(href='/contact.html') Contact
+            %li
+              %a(href='/informatie.html') Meer informatie
                 -# %li
                 -#   %a(href='/vacatures.html') Vacatures
           %ul.nav.navbar-nav.pull-right
@@ -56,6 +55,11 @@
 
     ${self.body()}
 
+
+    .footer
+      #callme
+        %a(href='/bel-me-terug.html')
+          Bel me terug
     #fb-root
   %script
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

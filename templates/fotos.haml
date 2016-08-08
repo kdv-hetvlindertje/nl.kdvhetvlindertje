@@ -1,0 +1,28 @@
+<%inherit file="_base.haml" />
+
+<%def name="thumbnail(no, title)">
+    .col-md-3
+      <a href="./img/foto/${no}.jpg" class="lightbox-handler" data-gallery="Foto's", data-title="${title}">
+        %img.img-thumbnail.img-responsive(src='./img/foto/${no}_thumb.jpg', width="100%")
+      </a>
+</%def>
+
+<%def name="body()">
+  .container
+    .row
+      .col-md-12
+        %h1.page-header Foto's
+    .row
+      .images
+        ${thumbnail(5, "Lichte binnenruimte")}
+        ${thumbnail(6, "Binnenruimte")}
+        ${thumbnail(1, "Keuken")}
+        ${thumbnail(3, "Speeltuin")}
+        ${thumbnail(4, "Speeltuin")}
+
+  %script
+    $(document).delegate('.lightbox-handler', 'click', function(event) {
+      event.preventDefault();
+      $(this).ekkoLightbox();
+    });
+</%def>
