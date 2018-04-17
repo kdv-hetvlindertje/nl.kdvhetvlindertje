@@ -19,9 +19,9 @@ for filename in os.listdir('./templates'):
         destination_file = './build/%s.html' % template_name
 
         # Render!
-        print "Rendering %s.haml to %s" % (template_name, destination_file)
+        print("Rendering %s.haml to %s" % (template_name, destination_file))
         with open(destination_file, 'w') as fh:
             try:
                 fh.write(template.render())
             except:
-                print mako.exceptions.text_error_template().render()
+                print(mako.exceptions.text_error_template().render())

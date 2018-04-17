@@ -1,0 +1,20 @@
+[[source]]
+
+url = "https://pypi.python.org/simple"
+verify_ssl = true
+name = "pypi"
+
+
+[packages]
+
+"151c254" = {file = "https://github.com/mikeboers/PyHAML/archive/master.zip"}
+mako = "*"
+
+
+[dev-packages]
+
+
+
+[requires]
+
+python_version = "2.7"
