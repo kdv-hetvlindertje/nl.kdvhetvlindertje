@@ -8,3 +8,6 @@ mako = "*"
 hamlpy3 = "*"
 
 [dev-packages]
+
+[scripts]
+build = "python render.py"
