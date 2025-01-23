@@ -1,30 +1,39 @@
 <%inherit file="_base.haml" />
 
 <%def name="thumbnail(no, title)">
-    .col-md-3
-      <a href="./img/foto/${no}.jpg" class="lightbox-handler" data-gallery="Foto's", data-title="${title}">
-        %img.img-thumbnail.img-responsive(src='./img/foto/${no}_thumb.jpg', width="100%")
-      </a>
+    <div class="col-md-3">
+        <a href="./img/foto/${no}.jpg" class="lightbox-handler" data-gallery="Foto's" data-title="${title}">
+            <img class="img-thumbnail img-responsive" src="./img/foto/${no}_thumb.jpg" width="100%">
+        </a>
+    </div>
 </%def>
 
 <%def name="body()">
-  .container
-    .row
-      .col-md-12
-        %h1.page-header Foto's
-    .row
-      .images
-        ${thumbnail(1, "Lichte binnenruimte")}
-        ${thumbnail(2, "Speeltuin")}
-        ${thumbnail(3, "Speeltuin")}
-        ${thumbnail(4, "Zonnebloem")}
-    .row(style="margin-top: 2em;")
-      .images
-        ${thumbnail(5, "Speeltuin")}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1 class="page-header">Foto's</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="images">
+                ${thumbnail(1, "Lichte binnenruimte")}
+                ${thumbnail(2, "Speeltuin")}
+                ${thumbnail(3, "Speeltuin")}
+                ${thumbnail(4, "Zonnebloem")}
+            </div>
+        </div>
+        <div class="row" style="margin-top: 2em;">
+            <div class="images">
+                ${thumbnail(5, "Speeltuin")}
+            </div>
+        </div>
+    </div>
 
-  %script
-    $(document).delegate('.lightbox-handler', 'click', function(event) {
-      event.preventDefault();
-      $(this).ekkoLightbox();
-    });
+    <script>
+        $(document).delegate('.lightbox-handler', 'click', function(event) {
+            event.preventDefault();
+            $(this).ekkoLightbox();
+        });
+    </script>
 </%def>

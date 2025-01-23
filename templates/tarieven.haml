@@ -1,10 +1,15 @@
 <%inherit file="_base.haml" />
 
 <%def name="body()">
-  .container
-    %h1.page-header
-      Tarieven
-    %a.pull-right(href='./img/tarieven-het-vlindertje.pdf')
-      Downloaden
-    %iframe(src='./img/tarieven-het-vlindertje.pdf', width='100%', height='2500', frameborder="0",style="border:0",)
+    <div class="container">
+        <h1 class="page-header">Tarieven</h1>
+        <a class="pull-right" href="./img/tarieven-het-vlindertje.pdf">Downloaden</a>
+        <iframe 
+            src="./img/tarieven-het-vlindertje.pdf" 
+            width="100%" 
+            height="2500" 
+            frameborder="0" 
+            style="border:0;">
+        </iframe>
+    </div>
 </%def>

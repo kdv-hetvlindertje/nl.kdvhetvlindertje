@@ -1,11 +1,10 @@
-import haml
 import mako.template
 import mako.lookup
 import os
 
 # Build the template lookup.
 lookup = mako.lookup.TemplateLookup(
-    ["templates"], preprocessor=haml.preprocessor
+    ["templates"]
 )  # noqa
 
 # parse all haml files which don't start with _
